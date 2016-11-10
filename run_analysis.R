@@ -39,4 +39,4 @@ output_data <- data[,only_mean_std_sub_act]
 melt_data <- melt(output_data, id = c("subject", "activity"))
 tidy_data <- dcast(melt_data, subject + activity ~ variable, mean)
 
-write.table(tidy_data, file = "./tidy_dataset.txt", row.name=FALSE)
+write.table(tidy_data, file = "./tidy_data.txt", row.name=FALSE)
